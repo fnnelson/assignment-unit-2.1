@@ -85,12 +85,44 @@ if (allowedPets > pets) {
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
+
+// I don't think this is what we're going for, but I know this works.  I can't think of how to define mostPets as the higher number between pets and friendsPets, but I will keep thinking about it or doing research.
+
+let mostPets = "";
+
+if (pets == friendsPets) {
+    mostPets = "We're tied for pets."
+    console.log(mostPets);
+} else if (pets > friendsPets) {
+    mostPets = "I have the most pets!";
+    console.log(mostPets);
+} else {
+    mostPets = "My friend has more pets!";
+    console.log(mostPets);
+}
+
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
 //      "Second is the best" if your lucky number is 2
 //      "Third is the one with the polka dot dress" if your lucky number is 3
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
+
+switch (luckyNumber) {
+    case 1:
+        console.log("First is the worst");
+        break;
+    case 2:
+        console.log("Second is the best");
+        break;
+    case 3:
+        console.log("Thirs is the one with the polka dot dress");
+        break;
+    default:
+        console.log("Luck is what happens when preparation meets opportunity");
+}
+
+// I felt that the MDN explanation was much clearer (simpler) than the explanation on W3!
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 
