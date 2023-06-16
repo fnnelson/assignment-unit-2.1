@@ -85,21 +85,32 @@ if (allowedPets > pets) {
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
+// let mostPets = "";
 
-// I don't think this is what we're going for, but I know this works.  I can't think of how to define mostPets as the higher number between pets and friendsPets, but I will keep thinking about it or doing research.
+// if (pets == friendsPets) {
+//     mostPets = "We're tied for pets."
+//     console.log(mostPets);
+// } else if (pets > friendsPets) {
+//     mostPets = "I have the most pets!";
+//     console.log(mostPets);
+// } else {
+//     mostPets = "My friend has more pets!";
+//     console.log(mostPets);
+// }
 
-let mostPets = "";
+// Forrest: first attempt without research - I don't think this is what we're going for, but this at least works?  I can't think of how to define mostPets to be the higher number between pets and friendsPets, but I will keep thinking about it or doing research.
+
+let mostPets = Math.max(pets, friendsPets);
 
 if (pets == friendsPets) {
-    mostPets = "We're tied for pets."
-    console.log(mostPets);
-} else if (pets > friendsPets) {
-    mostPets = "I have the most pets!";
-    console.log(mostPets);
+    console.log("We're tied on pets.");
+} else if (mostPets == friendsPets) {
+    console.log("My friend has more pets!");
 } else {
-    mostPets = "My friend has more pets!";
-    console.log(mostPets);
+    console.log("I have the most pets!");
 }
+
+// Forrest: I think I found out how to define mostPets as the max of the 2 variables.  I'm not sure if the conditional was done perfectly here, but it at least works for this scenario.
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
@@ -122,7 +133,7 @@ switch (luckyNumber) {
         console.log("Luck is what happens when preparation meets opportunity");
 }
 
-// I felt that the MDN explanation was much clearer (simpler) than the explanation on W3!
+// Forrest: this was a cool one to learn with conditionals! Fun to think of conditionals like a current going through electrical switches, and the ones that match will "turn on" that code.
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 
