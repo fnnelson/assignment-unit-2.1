@@ -1,15 +1,16 @@
 // REQUIRED FEATURES:
 // 1 - Create a variable called `firstName` and assign it the value of your first name
 const firstName = "Forrest";
-console.log(firstName);
 
 // 2 - Create a second variable called `lastName` and assign it the value of your last name
 const lastName = "Nelson";
-console.log(lastName);
 
 // 3 - Create a third variable called `fullName`, assign it the value of your first and last name
 // (remember, you already have variables for this, can you use those?)
 const fullName = firstName + " " + lastName;
+
+// or using the comma for a space in the console log
+console.log(firstName, lastName);
 
 // 4 - Console log the value of `fullName`
 console.log(fullName);
@@ -22,7 +23,7 @@ const luckyNumber = 47;
 // Refer back to the videos if you need help with this one.
 console.log("My name is " + fullName + ", and I think " + luckyNumber + " is a winner!");
 
-// another way I have learned in the past
+// another way I have learned in a class
 let declaration = `My name is ${fullName}, and I think ${luckyNumber} is a winner!`;
 console.log(declaration);
 
@@ -48,6 +49,7 @@ const allowedPets = 3;
 
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
 // if it's not true, console log "How about we stay home?"
+
 if (adventurous) {
     console.log("Adventures are great!");
 } else {
@@ -85,6 +87,8 @@ if (allowedPets > pets) {
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
+// Forrest: first attempt without research - I don't think this is what we're going for, but this at least works?  I can't think of how to define mostPets to be the higher number between pets and friendsPets, but I will keep thinking about it or doing research.
+
 // let mostPets = "";
 
 // if (pets == friendsPets) {
@@ -98,7 +102,7 @@ if (allowedPets > pets) {
 //     console.log(mostPets);
 // }
 
-// Forrest: first attempt without research - I don't think this is what we're going for, but this at least works?  I can't think of how to define mostPets to be the higher number between pets and friendsPets, but I will keep thinking about it or doing research.
+// Forrest: I think I found out how to define mostPets as the max of the 2 variables.  I'm not sure if the conditional was done perfectly here, but it at least works for this scenario.
 
 let mostPets = Math.max(pets, friendsPets);
 
@@ -109,8 +113,6 @@ if (pets == friendsPets) {
 } else {
     console.log("I have the most pets!");
 }
-
-// Forrest: I think I found out how to define mostPets as the max of the 2 variables.  I'm not sure if the conditional was done perfectly here, but it at least works for this scenario.
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
@@ -137,4 +139,14 @@ switch (luckyNumber) {
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 
+let goTravel = adventurous ? "Adventures are great!" : "How about we stay home?";
+console.log(goTravel);
 
+// or using a function based on what I read on MDN Web Docs.. might have some other uses
+
+function doStuff(ifAdventurous) {
+    return (ifAdventurous ? "Adventures are great!" : "How about we stay home?");
+}
+console.log(doStuff(true));
+
+// Forrest: another cool one to learn - there are seemingly countless ways to do if/then statements
