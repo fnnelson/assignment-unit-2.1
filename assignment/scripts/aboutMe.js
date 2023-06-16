@@ -129,7 +129,7 @@ switch (luckyNumber) {
         console.log("Second is the best");
         break;
     case 3:
-        console.log("Thirs is the one with the polka dot dress");
+        console.log("Third is the one with the polka dot dress");
         break;
     default:
         console.log("Luck is what happens when preparation meets opportunity");
